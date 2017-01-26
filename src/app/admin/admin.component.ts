@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { AngularFire, FirebaseObjectObservable , AuthProviders } from 'angularfire2';
 import { AlbumService } from '../album.service';
 import { Album } from '../album.model';
 

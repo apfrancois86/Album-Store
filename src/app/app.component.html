@@ -6,6 +6,12 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a routerLink="about">About</a></li>
       <li><a routerLink="marketplace">Marketplace</a></li>
+      <li><button md-raised-button (click)="login()">
+  <img width="30" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />Use My Google Account
+</button></li>
+      <li><button md-raised-button (click)="logout()">
+  Logout
+</button></li>
     </ul>
   </div>
 </nav>

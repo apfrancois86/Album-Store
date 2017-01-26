@@ -10,7 +10,7 @@ import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AdminComponent } from './admin/admin.component';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
 import { EditAlbumComponent } from './edit-album/edit-album.component';
 
 
@@ -36,7 +36,10 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig,{
+      provider: AuthProviders.Google,
+      method: AuthMethods.Popup
+    })
    ],
   providers: [],
   bootstrap: [AppComponent]
